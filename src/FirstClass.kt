@@ -44,4 +44,27 @@ fun main (args: Array<String>)
         true-> println("14")
         false->println("15")
     }
+    //Label breaks
+    loop@ for(i in 1..10)
+    {
+        println("Outer loop value $i")
+        for(j in 1..10){
+            println("Inner loop value $j")
+            if(j==2)break@loop
+            //This breaks outer loop
+            //And hence breaks inner loop as well
+        }
+    }
+
+    //Properties with custom getter and setter
+    var smallEntity = SmallEntity()
+    //This will set the values to the field
+    smallEntity.age=24
+    smallEntity.name="Kotlin" //No message will be displayed
+    
+    //will set the value to the field
+    smallEntity.age=23
+    smallEntity.name="Java"
+    //Will print the message
+
 }
