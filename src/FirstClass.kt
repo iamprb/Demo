@@ -3,6 +3,7 @@ import java.util.*
 fun main (args: Array<String>)
 {
     var name : String? = "Pranay"
+    println(name?.length)
     var age :Int=24
 
     var secondClass = SecondClass()
@@ -61,10 +62,15 @@ fun main (args: Array<String>)
     //This will set the values to the field
     smallEntity.age=24
     smallEntity.name="Kotlin" //No message will be displayed
-    
+
     //will set the value to the field
     smallEntity.age=23
     smallEntity.name="Java"
     //Will print the message
+
+    //Singleton pattern here
+    Singleton.instance
+    Singleton.instance.singletonString="My Singleton Class"
+    println(Singleton.instance.singletonString)
 
 }
