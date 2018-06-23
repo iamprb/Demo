@@ -73,4 +73,15 @@ fun main (args: Array<String>)
     Singleton.instance.singletonString="My Singleton Class"
     println(Singleton.instance.singletonString)
 
+  //Hashmaps
+    val maps= mapOf(
+            "key1" to 1,
+            "Key2" to 2,
+            "Key3" to 3
+    )
+    for ((key,value)in maps.entries)
+    {
+        println("$key -> $value")
+    }
+
 }
